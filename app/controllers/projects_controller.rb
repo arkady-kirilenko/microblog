@@ -19,6 +19,7 @@ class ProjectsController < ApplicationController
       redirect_to @project
     else
       flash['danger'] = "Failed to Create Project"
+      render 'new'
     end
   end
 
@@ -31,6 +32,7 @@ class ProjectsController < ApplicationController
       redirect_to @project
     else
       flash['danger'] = "Failed to Update Project"
+      render 'edit'
     end
   end
 
