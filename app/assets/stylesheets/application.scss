@@ -1,6 +1,10 @@
+@import "reset";
+
 @import "bourbon";
 @import "base/base";
 @import "neat";
+
+@import "page-header";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
