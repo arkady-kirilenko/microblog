@@ -1,0 +1,34 @@
+section.project-page {
+  $std-margin: 2em 2em 0 2em;
+  $big-font-size: 32px;
+  $text-background: white;
+  $background: #269;
+  $border-radius: 0.75em;
+
+  padding: 3em 0;
+
+  background-color: $background;
+  background-image: linear-gradient(white 2px, transparent 2px),
+  linear-gradient(90deg, white 2px, transparent 2px),
+  linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+  background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+
+  overflow: hidden;
+
+  div.project-container {
+    @include outer-container;
+    padding: $std-margin;
+
+    background-color: $text-background;
+    border-radius: $border-radius;
+
+    h1.project-title {
+      font-size: $big-font-size;
+    }
+
+    a {
+      padding-right: 1em;
+    }
+  }
+}

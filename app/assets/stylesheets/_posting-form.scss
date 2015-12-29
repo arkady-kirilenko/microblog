@@ -1,0 +1,16 @@
+section.project-form-page {
+  @include outer-container;
+  $title-margin: 1em 0em 0em 0em;
+  $big-font-size: 32px;
+
+  h1.page-title {
+    margin-top: $title-margin;
+    font-size: $big-font-size;
+  }
+
+  div.project_description {
+    textarea {
+      min-height: 15em;
+    }
+  }
+}

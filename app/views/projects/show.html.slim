@@ -1,4 +1,6 @@
-h1 =  @project.title
-= link_to "Edit Project", edit_project_path(@project)
-= link_to "Delete Project", project_path(@project), method: :delete
-p =  raw(@project.description)
+section.project-page
+  div.project-container
+    h1.project-title =  @project.title
+    = link_to "Edit Project", edit_project_path(@project)
+    = link_to "Delete Project", project_path(@project), method: :delete
+    = raw(@project.description)
