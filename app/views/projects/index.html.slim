@@ -1,5 +1,6 @@
 section.project-index
   = link_to 'New Project', new_project_path
-  - @projects.each do |project|
-    br
-    = link_to project.title, project
+  div.index-container
+    - @projects.each do |project|
+      div.project-thumb
+        = link_to project.title, project

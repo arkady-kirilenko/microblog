@@ -38,11 +38,32 @@ section.project-page {
 }
 
 section.project-index {
+  $text-color: white;
   @include blueprint-blackground;
 
   min-height: 100vh;
 
+  div.index-container {
+    @include outer-container;
+
+    div.project-thumb {
+      background-color: black;
+
+      @include span-columns(6);
+      @include omega(2n);
+
+      min-height: 250px;
+      margin-bottom: 2.75em;
+
+
+    }
+  }
+
   a {
-    color: white;
+    color: $text-color;
+
+    &:hover {
+      font-weight: bold;
+    }
   }
 }
