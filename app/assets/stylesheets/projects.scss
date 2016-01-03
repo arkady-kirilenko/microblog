@@ -1,5 +1,7 @@
 $text-background: white;
 $background: #269;
+$mobile: new-breakpoint(max-width 500px 4);
+$margin: new-breakpoint(max-width 980px 4);
 
 @mixin blueprint-blackground() {
   background-color: $background;
@@ -55,8 +57,15 @@ section.project-index {
       min-height: 250px;
       margin-bottom: 2.75em;
 
-
+      @include media($mobile) {
+        @include span-columns(4);
+        @include omega();
+      }
     }
+  }
+
+  @include media($margin) {
+    padding: 0 1em;
   }
 
   a {
@@ -64,6 +73,18 @@ section.project-index {
 
     &:hover {
       font-weight: bold;
+    }
+  }
+
+  div.pagination {
+    text-align: center;
+    padding: 1em 0 1.5em 0;
+
+    .previous_page,.next_page,
+    .current, a {
+      background-color: green;
+      padding: 0.25em 0.5em;
+      border-radius: 25%;
     }
   }
 }

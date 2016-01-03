@@ -1,5 +1,6 @@
 section.project-index
   = link_to 'New Project', new_project_path
+  = will_paginate @projects
   div.index-container
     - @projects.each do |project|
       div.project-thumb

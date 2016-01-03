@@ -1,6 +1,6 @@
 section.project-page
   div.project-container
-    h5 = link_to "All Projects", projects_path
+    h5 = link_to "← All Projects", projects_path
     h1.project-title =  @project.title
     h6 = "Submitted " + time_ago_in_words(@project.created_at) + " ago"
     = link_to "Edit Project", edit_project_path(@project)
