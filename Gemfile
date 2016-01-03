@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim'
 gem 'simple_form'
 gem 'will_paginate'
+gem 'paperclip'
 
 gem 'bourbon'
 gem 'neat'
