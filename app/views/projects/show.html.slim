@@ -3,8 +3,10 @@ section.project-page
     h5 = link_to "← All Projects", projects_path
     h1.project-title
       =  @project.title
-      span.title-link = link_to raw(fa_icon("fort-awesome") + " To Project"), root_path
-      span.title-link = link_to raw(fa_icon("github") + " To Github") , root_path
+      - if @project.project_url
+        span.title-link = link_to raw(fa_icon("fort-awesome") + " To Project"), @project.project_url
+      - if @project.github_url
+        span.title-link = link_to raw(fa_icon("github") + " To Github") , @project.github_url
     h6 = "Submitted " + time_ago_in_words(@project.created_at) + " ago"
 
     = image_tag @project.banner.url(:banner)

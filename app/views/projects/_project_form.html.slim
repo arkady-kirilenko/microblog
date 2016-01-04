@@ -1,5 +1,7 @@
 = simple_form_for @project do |f|
   = f.input :title
+  = f.input :project_url, label: 'URL: '
+  = f.input :github_url, label: 'Github: '
   = f.input :description
-  = f.input :banner, as: :file 
+  = f.input :banner, as: :file
   = f.button :submit
