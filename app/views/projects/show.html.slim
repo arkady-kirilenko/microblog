@@ -1,9 +1,12 @@
 section.project-page
   div.project-container
     h5 = link_to "← All Projects", projects_path
-    h1.project-title =  @project.title
+    h1.project-title
+      =  @project.title
+      span.title-link = link_to "To Project", root_path
+      span.title-link = link_to "To Github", root_path
     h6 = "Submitted " + time_ago_in_words(@project.created_at) + " ago"
-    = link_to "Edit Project", edit_project_path(@project)
-    = link_to "Delete Project", project_path(@project), method: :delete
-    figcaption Imagem Ilustrativa do Projeto
-    = raw(@project.description)
+
+    = image_tag @project.banner.url(:banner)
+    .project-text
+      = raw(@project.description)

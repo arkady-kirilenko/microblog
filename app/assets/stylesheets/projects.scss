@@ -25,16 +25,33 @@ section.project-page {
   div.project-container {
     @include outer-container;
     padding: $std-margin;
-
     background-color: $text-background;
     border-radius: $border-radius;
 
     h1.project-title {
       font-size: $big-font-size;
+
+      span.title-link {
+        font-size: 12px;
+        background-color: green;
+        padding: 0.25em;
+        margin-left: 0.4em;
+        border-radius: 5px;
+
+        a {
+          color: white;
+        }
+      }
     }
 
-    a {
-      padding-right: 1em;
+    img {
+      @include span-columns(12);
+      max-height: 300px;
+      margin-bottom: 1.5em;
+    }
+
+    .project-text {
+      @include span-columns(12);
     }
   }
 }
@@ -56,6 +73,8 @@ section.project-index {
 
       min-height: 250px;
       margin-bottom: 2.75em;
+
+      background-size: contain;
 
       @include media($mobile) {
         @include span-columns(4);
