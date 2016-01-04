@@ -1,4 +1,5 @@
 $text-background: white;
+$btn-color: #71BD73;
 $background: #269;
 $mobile: new-breakpoint(max-width 500px 4);
 $margin: new-breakpoint(max-width 980px 4);
@@ -11,10 +12,14 @@ $margin: new-breakpoint(max-width 980px 4);
   linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
   background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
 }
-
+@mixin centered() {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 section.project-page {
   $std-margin: 2em 2em 0 2em;
-  $big-font-size: 32px;
+  $big-font-size: 36px;
   $border-radius: 0.75em;
 
   padding: 3em 0;
@@ -30,13 +35,18 @@ section.project-page {
 
     h1.project-title {
       font-size: $big-font-size;
+      margin-bottom: 0.2em;
 
       span.title-link {
         font-size: 12px;
-        background-color: green;
+        background-color: $btn-color;
         padding: 0.25em;
         margin-left: 0.4em;
         border-radius: 5px;
+
+        &:hover {
+          background-color:  darken($btn-color,10%);
+        }
 
         a {
           color: white;
@@ -44,6 +54,10 @@ section.project-page {
       }
     }
 
+    h6 {
+      color: #444;
+      font-size: 15px;
+    }
     img {
       @include span-columns(12);
       max-height: 300px;
@@ -51,7 +65,19 @@ section.project-page {
     }
 
     .project-text {
-      @include span-columns(12);
+      @include span-columns(9);
+      @include shift(1);
+
+      margin-top: 1em;
+      margin-bottom: 1em;
+
+      color: #444;
+      font-size: 1.1em;
+      line-height: 30.3667px;
+      font-family: serif;
+      text-indent: 2.5em;
+      text-align: justify;
+
     }
   }
 }
@@ -73,8 +99,23 @@ section.project-index {
 
       min-height: 250px;
       margin-bottom: 2.75em;
+      position: relative;
 
-      background-size: contain;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+
+      a {
+        position: absolute;
+        font-size: 42px;
+        @include centered();
+
+        color: $btn-color;
+      }
 
       @include media($mobile) {
         @include span-columns(4);
@@ -97,13 +138,18 @@ section.project-index {
 
   div.pagination {
     text-align: center;
-    padding: 1em 0 1.5em 0;
+    padding: 1.25em 0 1.5em 0;
 
     .previous_page,.next_page,
     .current, a {
-      background-color: green;
+      background-color: $btn-color;
       padding: 0.25em 0.5em;
-      border-radius: 25%;
+      border-radius: 5px;
+      font-size: 14px;
+
+      &:hover {
+        background-color: darken($btn-color, 10%);
+      }
     }
   }
 }
