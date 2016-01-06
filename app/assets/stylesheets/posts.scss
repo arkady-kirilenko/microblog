@@ -1,0 +1,15 @@
+$typo-color: #444;
+
+section.post-list {
+  @include outer-container;
+
+  padding-top: 2em;
+
+  .list {
+    @include span-columns(7);
+    @include shift(1);
+  }
+
+  article.item {
+  }
+}

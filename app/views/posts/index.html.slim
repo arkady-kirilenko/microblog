@@ -1,1 +1,10 @@
-= link_to "New Post", new_post_path
+section.post-list
+  .list
+    - @posts.each do  |post|
+      article.item.type-system-serif
+        h1 = link_to post.title, post
+        p.date
+          em = "Posted " + time_ago_in_words(post.created_at) + " ago by Luiz Vasconcellos"
+        p = raw(post.body)
+        = link_to raw("Read more &rsaquo;"), post, class: "read-more"
+        hr
