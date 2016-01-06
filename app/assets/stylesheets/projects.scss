@@ -147,8 +147,10 @@ section.project-index {
       border-radius: 5px;
       font-size: 14px;
 
+      transition: all 0.15s linear;
+
       &:hover {
-        background-color: darken($btn-color, 10%);
+        background-color: darken($btn-color, 15%);
       }
     }
   }

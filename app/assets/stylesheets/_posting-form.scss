@@ -3,12 +3,19 @@ section.project-form-page {
   $title-margin: 1em 0em 0em 0em;
   $big-font-size: 32px;
 
+  margin-top: 1.5em;
   h1.page-title {
     margin-top: $title-margin;
     font-size: $big-font-size;
   }
 
   div.project_description {
+    textarea {
+      min-height: 15em;
+    }
+  }
+
+  div.post_content {
     textarea {
       min-height: 15em;
     }
