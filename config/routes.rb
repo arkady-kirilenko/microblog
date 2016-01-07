@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get '/about' => 'static#about'
   resources :projects
   resources :posts
-  
+  resources :comments, only: [:create]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

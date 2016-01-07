@@ -1,7 +1,6 @@
 section.post-container
-  article.post.type-system-serif
-    h1 = @post.title
-    p.date Posted 06 Jan 2016
-    p.author Author: Luiz Vasconcellos
-    .content
-      = raw(@post.body)
+  = render "post_article"
+  = simple_form_for @comment, html: {multipart: true} do |form|
+    = form.input :author
+    = form.input :content
+    = form.button :submit
