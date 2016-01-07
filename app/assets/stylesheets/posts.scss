@@ -13,3 +13,18 @@ section.post-list {
   article.item {
   }
 }
+
+section.post-container {
+  @include outer-container;
+
+  .post {
+    @include span-columns(10);
+    @include shift(1);
+
+    padding-top: 2em;
+
+    .content {
+      padding-top: 0.5em;
+    }
+  }
+}
