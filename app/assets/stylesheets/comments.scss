@@ -1,4 +1,74 @@
+$first-base-color: #E5E5E5;
+$second-base-color: #EEE;
+
 form.new_comment {
+  $comment-font-size: 16px;
   @include span-columns(10);
   @include shift(1);
+
+  padding: 0.5em 1.5em 1.5em 1.5em;
+  font-size: 15px;
+  background-color: $first-base-color;
+  border: 1px solid darken($first-base-color, 15%);
+  border-radius: 5px;
+
+  h2 {
+    margin: 0.75em 0;
+    font-size: 1.75em;
+  }
+
+  textarea {
+    min-height: 8em;
+  }
+
+  input[type=submit] {
+    float: right;
+    padding: 0.5em 0.75em;
+    border-radius: 0px;
+    background-color: $btn-color;
+  }
+}
+
+section.comment-container {
+  @include span-columns(10);
+  @include shift(1);
+
+  margin-bottom: 2.5em;
+
+  h2 {
+    font-size: 1.75em;
+    margin-top: 1em;
+    padding-bottom: 0.25em;
+
+    border-bottom: 1px solid #ccc;
+  }
+
+  .comment {
+    @include span-columns(9.5 of 10);
+    @include shift(0.25);
+
+    background-color: $second-base-color;
+    margin-top: 1em;
+    padding: 0.75em 1.5em 0 1.5em;
+    border: 1px solid darken($first-base-color, 15%);
+    border-radius: 2.5px;
+
+    h1 {
+      margin: 0.25em 0;
+      font-size: 18px;
+    }
+
+    h6 {
+      margin: 0;
+      font-size: 12px;
+      font-style: italic;
+      color: #666;
+
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.75em;
+    }
+  }
 }

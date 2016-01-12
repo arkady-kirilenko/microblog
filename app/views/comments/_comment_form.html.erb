@@ -1,0 +1,7 @@
+<%= simple_form_for @comment, html: {multipart: true} do |form| %>
+  <h2><%= "Leave a comment below:" %></h2>
+  <%= form.hidden_field :post_id, :value => @post.id%>
+  <%= form.input :author, label: "Name: " %>
+  <%= form.input :content, label: "Comment: " %>
+  <%= form.button :submit, "Post it! " %>
+<%end%>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'comment/create'
+
   root 'static#home'
 
   get '/about' => 'static#about'

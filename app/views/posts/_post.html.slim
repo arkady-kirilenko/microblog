@@ -1,0 +1,8 @@
+article.post.type-system-serif
+  h1 = @post.title
+  p.date = "Posted " + @post.created_at.strftime("%d %b %Y")
+  p.author Author: Luiz Vasconcellos
+  .content
+    = raw(@post.body)
+  = render partial: "post_tags", locals: { tags: @post.tags}
+  hr
