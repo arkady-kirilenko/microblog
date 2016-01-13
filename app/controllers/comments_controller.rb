@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   def create
     @commentable = Post.find(params[:comment][:post_id]) if params[:comment][:post_id]
     @comment = @commentable.comments.build(comment_params)
+
     if @comment.save
       flash[:success] = "Comment submited"
     else

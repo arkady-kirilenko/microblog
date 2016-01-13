@@ -1,8 +1,9 @@
 section.comment-container
   h2 Comments
-  - comments.each do |comment|
-    .comment
-      .comment-content
-        h6 = "Posted " + comment.created_at.strftime("%d %b %Y at %H:%M")
-        h1 = comment.author + " :"
-        p = comment.content
+  #comments-list
+    - comments.each do |comment|
+      .comment
+        .comment-content
+          h6 = "Posted " + comment.created_at.strftime("%d %b %Y at %H:%M")
+          h1 = comment.author + " :"
+          p = comment.content

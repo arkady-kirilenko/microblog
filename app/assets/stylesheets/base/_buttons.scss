@@ -2,7 +2,7 @@ $btn-color: #71BD73;
 
 #{$all-buttons} {
   appearance: none;
-  background-color: $action-color;
+  background-color: $btn-color;
   border: 0;
   border-radius: $base-border-radius;
   color: #fff;
@@ -22,7 +22,7 @@ $btn-color: #71BD73;
 
   &:hover,
   &:focus {
-    background-color: shade($action-color, 20%);
+    background-color: shade($btn-color, 20%);
     color: #fff;
   }
 
@@ -31,12 +31,12 @@ $btn-color: #71BD73;
     opacity: 0.5;
 
     &:hover {
-      background-color: $action-color;
+      background-color: $btn-color;
     }
   }
 }
 
-input[type=submit] {
+button {
   float: right;
   padding: 0.5em 0.75em;
   border-radius: 0px;

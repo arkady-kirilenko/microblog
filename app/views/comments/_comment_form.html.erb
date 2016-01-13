@@ -1,7 +1,7 @@
-<%= simple_form_for @comment, html: {multipart: true} do |form| %>
+<%= simple_form_for @comment, html: {multipart: true}, remote: true do |form| %>
   <h2><%= "Leave a comment below:" %></h2>
   <%= form.hidden_field :post_id, :value => @post.id%>
   <%= form.input :author, label: "Name: " %>
   <%= form.input :content, label: "Comment: " %>
-  <%= form.button :submit, "Post it! " %>
+  <%= form.button :button, "Post it!".html_safe, data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."} %>
 <%end%>

@@ -21,6 +21,7 @@ class PostsController < ApplicationController
     if @post.save
       flash[:success] = "Post successfully created!"
 
+      #create tags from string separated by a ;
       params[:tags].split(";").each do |tag|
         @tag = Tag.find_or_create_by(content: tag.strip)
         Tagging.create(post_id: @post.id, tag_id: @tag.id)
