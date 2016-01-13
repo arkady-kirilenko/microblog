@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   root 'static#home'
 
-  get '/about' => 'static#about'
   resources :projects
   resources :posts
   resources :comments, only: [:create]
