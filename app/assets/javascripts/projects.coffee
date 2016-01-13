@@ -3,10 +3,12 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
 
+  #Adds a semi-transparent mask over a project when hovered
   $(".project-thumb").hover ->
-    # $(this).children().eq(1).before("<div class='hover'></div>")
-    $(this).children(".hover").fadeIn "slow"
-    $(this).children("a").fadeIn "slow"
+    # Hover In
+    $(this).children(".hover").fadeIn "fast"
+    $(this).children("a").fadeIn "fast"
   , ->
-    $(this).children(".hover").fadeOut "slow"
-    $(this).children("a").fadeOut "slow"
+    # Hover Out
+    $(this).children(".hover").fadeOut "fast"
+    $(this).children("a").fadeOut "fast"
