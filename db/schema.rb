@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 20160113201734) do
     t.string   "slug"
   end
 
+  add_index "projects", ["slug"], name: "index_projects_on_slug", using: :btree
+
   create_table "taggings", force: :cascade do |t|
     t.integer  "post_id"
     t.integer  "tag_id"
