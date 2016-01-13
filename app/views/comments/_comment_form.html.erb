@@ -1,4 +1,4 @@
-<%= simple_form_for @comment, html: {multipart: true}, remote: true do |form| %>
+<%= simple_form_for @comment, html: {multipart: true} do |form| %>
   <h2><%= "Leave a comment below:" %></h2>
   <%= form.hidden_field :post_id, :value => @post.id%>
   <%= form.input :author, label: "Name: " %>

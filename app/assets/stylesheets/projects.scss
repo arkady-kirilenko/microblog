@@ -91,6 +91,16 @@ section.project-index {
   div.index-container {
     @include outer-container;
 
+    .hover {
+      background-color: rgba(0,0,255,0.3);
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+
     div.project-thumb {
       background-color: black;
 
@@ -110,6 +120,7 @@ section.project-index {
       }
 
       a {
+        display: none;
         position: absolute;
         font-size: 42px;
         @include centered();
@@ -117,12 +128,15 @@ section.project-index {
         color: $btn-color;
       }
 
+
       @include media($mobile) {
         @include span-columns(4);
         @include omega();
       }
     }
   }
+
+
 
   @include media($margin) {
     padding: 0 1em;
