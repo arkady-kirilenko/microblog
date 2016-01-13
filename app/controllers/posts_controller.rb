@@ -64,10 +64,8 @@ class PostsController < ApplicationController
     def post_feed category
       posts = []
       if params[:category]
-        marked  = Tagging.where(tag_id: Tag.find_by(content: params[:category]))
-        marked.each do |id_post|
-          posts << Post.find(id_post.post_id)
-        end
+        marked  = Tagging.where(tag_id: Tag.find_by(content: params[:category])).includes(:post)
+        marked.each { |mark| posts << mark.post }
       else
         posts = Post.all.order(created_at: :desc)
       end
