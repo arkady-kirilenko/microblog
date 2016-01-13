@@ -13,6 +13,7 @@ gem 'slim'
 gem 'simple_form'
 gem 'will_paginate'
 gem 'paperclip'
+gem 'friendly_id'
 
 gem 'bourbon'
 gem 'neat'
