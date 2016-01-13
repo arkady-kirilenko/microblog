@@ -17,6 +17,15 @@ section.post-list {
 section.post-container {
   @include outer-container;
 
+  h5 {
+    @include span-columns(10);
+    @include shift(1);
+
+    margin-top: 1em;
+    margin-bottom: 0;
+  }
+
+
   .post {
     @include span-columns(10);
     @include shift(1);

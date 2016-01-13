@@ -4,20 +4,25 @@ section.project-form-page {
   $big-font-size: 32px;
 
   margin-top: 1.5em;
+  padding: 1.5em;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+
+
   h1.page-title {
     margin-top: $title-margin;
     font-size: $big-font-size;
   }
 
-  div.project_description {
-    textarea {
+  textarea {
       min-height: 15em;
     }
-  }
 
   div.post_content {
     textarea {
       min-height: 15em;
     }
   }
+
 }

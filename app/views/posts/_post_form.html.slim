@@ -1,4 +1,12 @@
-= simple_form_for @post do |f|
-  = f.input :title
-  = f.input :body
-  = f.button :submit
+= form_tag posts_path do
+  = fields_for @post do |f|
+    .field
+      = f.label :title
+      = f.text_field :title
+    .field
+      = f.label :body
+      = f.text_area :body
+  = label_tag "Tags"
+  = text_field_tag :tags
+  .actions
+    = submit_tag "Submit Post"

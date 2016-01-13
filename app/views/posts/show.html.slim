@@ -1,4 +1,5 @@
 section.post-container
+  h5 = link_to "← All Posts", posts_path
   = render @post
   = render "comments/comment_form"
   = render partial: "post_comments", locals: { comments: @post.comments}

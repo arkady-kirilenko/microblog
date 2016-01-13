@@ -1,5 +1,5 @@
 p.author.post-tags
   | Tags:
   - tags.each do |tag|
-    = link_to " " + tag.content , root_path
+    = link_to " " + tag.content , posts_path(category: tag.content)
     = comma = ", " unless tag == tags.last

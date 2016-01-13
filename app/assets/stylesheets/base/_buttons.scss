@@ -1,3 +1,5 @@
+$btn-color: #71BD73;
+
 #{$all-buttons} {
   appearance: none;
   background-color: $action-color;
@@ -31,5 +33,18 @@
     &:hover {
       background-color: $action-color;
     }
+  }
+}
+
+input[type=submit] {
+  float: right;
+  padding: 0.5em 0.75em;
+  border-radius: 0px;
+  background-color: $btn-color;
+  border: 1px solid darken($btn-color,15%);
+  transition: 0.25s all linear;
+
+  &:hover {
+    background-color: darken($btn-color, 15%);
   }
 }

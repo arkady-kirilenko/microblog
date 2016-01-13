@@ -7,7 +7,8 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @category = params[:category]
+    @posts = post_feed @category
   end
 
   def new
@@ -16,8 +17,15 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
+
     if @post.save
       flash[:success] = "Post successfully created!"
+
+      params[:tags].split(";").each do |tag|
+        @tag = Tag.find_or_create_by(content: tag.strip)
+        Tagging.create(post_id: @post.id, tag_id: @tag.id)
+      end
+
       redirect_to @post
     else
       flash[:danger] = "Failed to create post"
@@ -52,5 +60,20 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body)
     end
+
+    def post_feed category
+      posts = []
+      if params[:category]
+        marked  = Tagging.where(tag_id: Tag.find_by(content: params[:category]))
+        marked.each do |id_post|
+          posts << Post.find(id_post.post_id)
+        end
+      else
+        posts = Post.all.order(created_at: :desc)
+      end
+
+      posts
+    end
+
 
 end
