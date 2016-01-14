@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_admin!, except: [:show, :index]
   before_action :set_post, only: [:edit,:update,:destroy]
 
   def show
@@ -17,7 +18,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-
     if @post.save
       flash[:success] = "Post successfully created!"
 
@@ -35,6 +35,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
@@ -59,7 +60,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, :id)
     end
 
     def post_feed category

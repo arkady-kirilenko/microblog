@@ -1,4 +1,4 @@
-= form_tag posts_path do
+= form_tag posts_path(@post) do
   = fields_for @post do |f|
     .field
       = f.label :title

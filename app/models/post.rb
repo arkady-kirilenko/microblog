@@ -9,11 +9,4 @@ class Post < ActiveRecord::Base
   validates :title, presence: true, length: { minimum: 3, maximum: 144 }
   validates :body, presence: true, length: { minimum: 2 }
   #validate slug?
-
-  def slug_candidates
-    [
-      :name,
-      [:name, :created_at]
-    ]
-  end
 end

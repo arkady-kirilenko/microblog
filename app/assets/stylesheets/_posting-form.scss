@@ -9,7 +9,6 @@ section.project-form-page {
   border: 1px solid #ccc;
   border-radius: 3px;
 
-
   h1.page-title {
     margin-top: $title-margin;
     font-size: $big-font-size;
@@ -25,4 +24,8 @@ section.project-form-page {
     }
   }
 
+}
+
+.login-form-page {
+  margin-bottom: 6.5em;
 }

@@ -9,4 +9,7 @@ class Project < ActiveRecord::Base
   validates :description, presence: true, length: { minimum: 3}
   validates :banner, presence: true
 
+
+
+
 end

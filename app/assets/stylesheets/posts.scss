@@ -4,6 +4,7 @@ section.post-list {
   @include outer-container;
 
   padding-top: 2em;
+  height: 72%;
 
   .list {
     @include span-columns(7);
