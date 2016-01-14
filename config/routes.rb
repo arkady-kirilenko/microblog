@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'comment/create'
-
   root 'static#home'
 
   resources :projects
-  resources :posts
   resources :comments, only: [:create]
+  scope '/blog' do
+    resources :posts
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

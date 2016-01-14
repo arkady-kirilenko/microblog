@@ -4,9 +4,9 @@ section.project-page
     h1.project-title
       =  @project.title
       - if @project.project_url
-        span.title-link = link_to raw(fa_icon("fort-awesome") + " To Project"), @project.project_url
+        span.title-link = link_to raw(fa_icon("fort-awesome") + " To Project"), @project.project_url, :target => "_blank"
       - if @project.github_url
-        span.title-link = link_to raw(fa_icon("code-fork") + " To Repository") , @project.github_url
+        span.title-link = link_to raw(fa_icon("code-fork") + " To Repository") , @project.github_url, :target => "_blank"
     h6 = "Submitted " + time_ago_in_words(@project.created_at) + " ago"
 
     = image_tag @project.banner.url(:banner)
