@@ -11,4 +11,5 @@ class Post < ActiveRecord::Base
       :name,
       [:name, :created_at]
     ]
+  end
 end
