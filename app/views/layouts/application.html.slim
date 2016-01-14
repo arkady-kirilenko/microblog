@@ -11,5 +11,8 @@ html
 
   body
     = render 'layouts/header'
+    - flash.each do |message_type, message|
+      div class="flash-#{message_type}"
+        p = message
     = yield
     = render 'layouts/footer'
