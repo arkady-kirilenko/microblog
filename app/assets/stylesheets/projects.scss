@@ -18,12 +18,11 @@ $margin: new-breakpoint(max-width 980px 4);
   transform: translate(-50%,-50%);
 }
 section.project-page {
-  $std-margin: 2em 2em 0 2em;
+  $std-margin: 2em 2em 1.5em 2em;
   $big-font-size: 36px;
-  $border-radius: 0.75em;
+  $border-radius: 5px;
 
-  margin: 0;
-  padding: 0;
+  padding: 2em 0;
   min-height: 100vh;
 
   @include blueprint-blackground;
@@ -44,6 +43,7 @@ section.project-page {
         padding: 0.25em;
         margin-left: 0.4em;
         border-radius: 5px;
+        border: 1px solid darken($btn-color,15%);
 
         &:hover {
           background-color:  darken($btn-color,10%);
@@ -87,7 +87,30 @@ section.project-index {
   $text-color: white;
   @include blueprint-blackground;
 
-  min-height: 100vh;
+  margin-top: -1em;
+  border-top: 0.75em solid white;
+
+  div.index-header{
+    margin-top: 0.75em;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    text-align: center;
+    background-color: darken($btn-color,15%);
+
+    h1,h2 {
+      $serif: 'Lusitana', serif;
+      $serif-2: 'Merriweather', serif;
+      $sans-serif: 'Merriweather Sans', sans-serif;
+      font-family: $sans-serif;
+      color: white;
+      font-size: 32px;
+      //text-shadow: -1.25px 0 black, 0 1.25px black, 1.25px 0 black, 0 -1.25px black;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+  }
 
   div.index-container {
     @include outer-container;
@@ -127,6 +150,7 @@ section.project-index {
         @include centered();
 
         color: $btn-color;
+        text-shadow: -1.25px 0 white, 0 1.25px white, 1.25px 0 white, 0 -1.25px white;
       }
 
 
@@ -153,19 +177,36 @@ section.project-index {
 
   div.pagination {
     text-align: center;
-    padding: 1.25em 0 1.5em 0;
+    padding: 1.5em 0 1.5em 0;
 
     .previous_page,.next_page,
     .current, a {
       background-color: $btn-color;
+      color: white;
       padding: 0.25em 0.5em;
       border-radius: 5px;
-      font-size: 14px;
+      font-size: 15px;
+      font-weight: bold;
+      border: 1.25px solid darken($btn-color, 15%);
 
       transition: all 0.15s linear;
 
       &:hover {
-        background-color: darken($btn-color, 15%);
+        background-color: darken($btn-color, 10%);
+      }
+    }
+
+    .current {
+      background-color: darken($btn-color, 10%);
+      font-style: normal;
+    }
+
+    .disabled {
+      background-color: lighten($btn-color, 20%);
+      border: 1px solid lighten($btn-color,10%);
+
+      &:hover {
+        background-color: lighten($btn-color, 20%);
       }
     }
   }

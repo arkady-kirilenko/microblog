@@ -13,3 +13,7 @@
 @import "lists";
 @import "tables";
 @import "typography";
+
+body {
+    min-height: 100vh;
+}

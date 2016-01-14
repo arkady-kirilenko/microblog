@@ -24,7 +24,7 @@ $green: #71BD73;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $blue;
+$action-color: desaturate(darken($blue, 20%), 30%);
 
 // Border
 $base-border-color: $light-gray;

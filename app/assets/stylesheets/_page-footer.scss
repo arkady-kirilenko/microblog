@@ -1,6 +1,6 @@
-// Uncomment this for a sticky header.
+// Uncomment this for a sticky footer.
 //
-// .wrapper-for-content-outside-of-header {
+// .wrapper-for-content-outside-of-footer {
 //   min-height: 100%;
 //   height: auto !important;
 //   height: 100%;
@@ -11,12 +11,12 @@
 //  height: 100%;
 // }
 
-// .wrapper-for-content-outside-of-header:after {
+// .wrapper-for-content-outside-of-footer:after {
 //   content: "";
 //   display: block;
 // }
 
-// .header-2, .wrapper-for-content-outside-of-header:after {
+// .footer-2, .wrapper-for-content-outside-of-footer:after {
 //   height: 17em;
 
 //   @include media($large-screen) {
@@ -24,22 +24,27 @@
 //   }
 // }
 
-.header-2 {
+.footer {
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  $header-background: $action-color;
-  $header-color: white;
-  $header-link-color: transparentize($header-color, 0.6);
-  $header-disclaimer-color: transparentize($header-color, 0.6);
+  $footer-background: desaturate(darken($action-color, 20%), 20%);
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
-  background: $header-background;
-  padding: $base-spacing;
+  background: $footer-background;
+  padding: 1em;
   width: 100%;
   display: inline-block;
 
-  .header-logo {
+  p {
+    color: white;
+    font-size: 16px;
+  }
+
+  .footer-logo {
     margin-right: 1em;
     margin-bottom: 1em;
 
@@ -49,7 +54,7 @@
     }
   }
 
-  .header-logo img {
+  .footer-logo img {
     height: 1.6em;
   }
 
@@ -77,26 +82,29 @@
   }
 
   ul li a {
-    color: $header-link-color;
-    font-size: 1.5em;
+    color: $footer-link-color;
     text-decoration: none;
 
     &:focus,
     &:hover {
-      color: transparentize($header-color, 0);
+      color: transparentize($footer-color, 0);
     }
   }
 
-  .header-secondary-links {
+  .footer-secondary-links {
     @include media($large-screen) {
       float: right;
     }
+
+    float: right;
+
+
 
     li {
       font-size: 0.8em;
     }
 
-    ul.header-social {
+    ul.footer-social {
       margin: 1em 0 0 0;
 
       @include media($large-screen) {
