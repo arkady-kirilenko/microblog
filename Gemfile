@@ -23,6 +23,17 @@ gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails'
+  gem 'capybara', '~> 2.5'
+  gem 'launchy'
+  gem 'factory_girl_rails', '~> 4.5.0'
+end
+
+group :test do
+  gem 'shoulda-matchers', require: false
+  gem 'database_cleaner', '~> 1.5'
+  gem 'faker', '~> 1.6.1'
+  gem 'simplecov', :require => false
 end
 
 group :development do
