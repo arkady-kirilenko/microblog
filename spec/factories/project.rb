@@ -6,5 +6,13 @@ FactoryGirl.define do
     github_url          {Faker::Internet.url}
     banner              {Faker::Company.logo}
 
+    factory :invalid_project do
+      title               ""
+      description         ""
+      project_url         ""
+      github_url          ""
+      banner              ""
+    end
+
   end
 end

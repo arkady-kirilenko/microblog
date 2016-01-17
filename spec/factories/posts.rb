@@ -1,15 +1,18 @@
-  FactoryGirl.define do
+FactoryGirl.define do
   factory :post do
     title         { Faker::Lorem.sentence}
     body          { Faker::Lorem.paragraph(3)}
 
+    #association :tagging, strategy: :build
+
     factory :tagged_post do
       transient do
-        tags_count 10
+        tag { create :tag}
       end
 
-      after(:create) do |post, evaluator|
-        create_list(:tag, evaluator.tags_count, posts: [post])
+      after :create do |post, evaluator|
+        post.tags << evaluator.tag
+        post.save
       end
     end
 
