@@ -78,7 +78,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #config paperclip ~ amazon s3
-  config.paperclip_defaults {
+  config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
       :bucket => ENV['S3_BUCKET_NAME'],
