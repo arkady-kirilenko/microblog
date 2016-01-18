@@ -37,7 +37,7 @@ $btn-color: #71BD73;
 }
 
 button {
-  float: right;
+  // float: right;
   padding: 0.5em 0.75em;
   border-radius: 0px;
   background-color: $btn-color;
@@ -46,5 +46,19 @@ button {
 
   &:hover {
     background-color: darken($btn-color, 15%);
+  }
+}
+
+.sqr-btn {
+  padding: 0.75em;
+  margin: 0 0.5em;
+  color: #999;
+  border-color: #888;
+  border-radius: 5px;
+  background-color: white;
+
+  &:hover, &:focus {
+    color: white;
+    background-color: #999;
   }
 }
