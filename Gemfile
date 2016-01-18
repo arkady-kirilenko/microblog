@@ -14,6 +14,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'will_paginate'
 gem 'paperclip'
+gem 'aws-sdk'
 gem 'friendly_id'
 
 gem 'bourbon'
