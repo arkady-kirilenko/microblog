@@ -4,6 +4,7 @@ section.project-form-page {
   $big-font-size: 32px;
 
   margin-top: 1.5em;
+  margin-bottom: 1.5em;
   padding: 1.5em;
   background-color: #eee;
   border: 1px solid #ccc;
@@ -17,6 +18,10 @@ section.project-form-page {
   textarea {
       min-height: 15em;
     }
+
+  .actions {
+    float: right;
+  }
 
   div.post_content {
     textarea {

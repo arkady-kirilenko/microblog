@@ -27,7 +27,7 @@ $success-color: #e6efc2 !default;
   @include flash($alert-color);
 }
 
-.flash-error {
+.flash-danger {
   @include flash($error-color);
 }
 
