@@ -9,6 +9,6 @@ section.project-page
         span.title-link = link_to raw(fa_icon("code-fork") + " To Repository") , @project.github_url, :target => "_blank"
     h6 = "Submitted " + time_ago_in_words(@project.created_at) + " ago"
 
-    = image_tag @project.banner.url(:banner)
+    = image_tag @project.banner.url(:show)
     .project-text
       = raw(@project.description)

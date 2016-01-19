@@ -6,6 +6,6 @@ section.project-index
   div.index-container
     - @projects.each do |project|
       div.project-thumb
-        = image_tag project.banner.url
+        = image_tag project.banner.url(:banner)
         .hover
         = link_to project.title, project, class:"link"
