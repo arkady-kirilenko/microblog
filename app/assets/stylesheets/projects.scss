@@ -23,7 +23,7 @@ section.project-page {
   $border-radius: 5px;
 
   padding: 2em 0;
-  min-height: 100vh;
+  min-height: 85vh;
 
   @include blueprint-blackground;
 
@@ -76,7 +76,7 @@ section.project-page {
       font-size: 1.1em;
       line-height: 30.3667px;
       font-family: serif;
-      text-indent: 2.5em;
+      text-indent: 1em;
       text-align: justify;
 
     }
@@ -89,6 +89,7 @@ section.project-index {
 
   margin-top: -1em;
   border-top: 0.75em solid white;
+  min-height: 85vh;
   height: 100%;
 
 

@@ -4,4 +4,6 @@
   = f.input :github_url, label: 'Github: '
   = f.input :description
   = f.input :banner, as: :file
-  = f.button :submit
+  .actions
+    button class= "sqr-btn" id="project-preview" type="button" Preview
+    = f.button :submit
